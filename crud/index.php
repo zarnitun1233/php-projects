@@ -10,23 +10,23 @@ $data = $statement->fetchAll();
 /**
  * Show Message "Added" when one user is added
  */
-if ($_SESSION['add']) {
+if (isset($_SESSION['add'])) {
     echo "New User Added";
-    $_SESSION['add'] = false;
+    unset($_SESSION['add']);
 }
 /**
  * Show Message "Updated" when one user is Updated
  */
-if ($_SESSION['update']) {
+if (isset($_SESSION['update'])) {
     echo "Updated";
-    $_SESSION['update'] = false;
+    unset($_SESSION['update']);
 }
 /**
  * Show Message "Deleted" when one user is deleted
  */
-if ($_SESSION['delete']) {
+if (isset($_SESSION['delete'])) {
     echo "Deleted";
-    $_SESSION['delete'] = false;
+    unset($_SESSION['delete']);
 }
 ?>
 <!DOCTYPE html>
